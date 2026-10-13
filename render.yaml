@@ -19,6 +19,8 @@ services:
         sync: false
       - key: DEFAULT_MODEL
         value: gpt-4o-mini
+      - key: PYTHON_VERSION
+        value: 3.12.15
 
 databases:
   - name: research-proto-agent-db
