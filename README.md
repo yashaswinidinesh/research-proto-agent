@@ -58,6 +58,22 @@ cd frontend && npm install && npm run dev
 
 FastAPI · SQLAlchemy async · PostgreSQL · Next.js 14 · Tailwind · Docker Compose · GitHub Actions
 
+## Deploy
+
+### API and PostgreSQL on Render
+
+The root `render.yaml` Blueprint defines the FastAPI web service and managed PostgreSQL database. In Render, create a new Blueprint from this GitHub repository and deploy it. The API works without an OpenAI key in mock mode; add `OPENAI_API_KEY` in Render only when you want live model calls.
+
+### Frontend on Vercel
+
+Import this repository into Vercel, set the project root directory to `frontend`, and add this environment variable using the public URL of the deployed Render API:
+
+```text
+NEXT_PUBLIC_API_URL=https://<render-api-host>/api/v1
+```
+
+Then deploy. Vercel provides a stable HTTPS URL such as `https://<project>.vercel.app`; it is a hostname, not a dedicated fixed IP address.
+
 ## Author
 
 **Yashaswini Dinesh** · [linkedin.com/in/yashaswini-dinesh-roopa](https://linkedin.com/in/yashaswini-dinesh-roopa)
