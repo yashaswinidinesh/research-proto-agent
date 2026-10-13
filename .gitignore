@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+backend/.venv/
+
+# Secrets and local settings
+.env
+.env.*
+!.env.example
+
+# Next.js
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+
+# Local databases and generated artifacts
+*.db
+backend/artifacts/
